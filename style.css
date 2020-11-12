@@ -32,6 +32,15 @@ body{
 }
 p{
    font-size: 18px;
+   margin: 5px 0;
+   
+   text-align: center;
+   font-size: 18px;
+   color: #255f8e;
+}
+p:last-child{
+   color: black;
+   font-weight: 700;
 }
 form{
 
@@ -63,12 +72,15 @@ form{
    background-repeat: no-repeat;
 }
 #inputValue{
-   width: 300px;
+   width: 400px;
    height: 25px;
    padding: 5px;
    border-radius: 5px;
    border-style: none;
-
+   text-align: center;
+   appearance: textfield;
+   font-size: 20px;
+margin-bottom: 10px;
 }
 #submit{
    /* margin-left: 15px;
@@ -81,14 +93,17 @@ form{
    .container{
       width: 100vw;
    }
-
+   h1{
+      padding-top: 15px;
+   }
    #asterix{
-      width: 50%;
-      height: 50vw;
+      width: 45%;
+      height: 45vw;
       float: none;
       margin: 0 auto;
    }
    #main{
+
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -109,8 +124,17 @@ form{
       float: none;
    }
    p{
+      padding: 0;
+      margin: 5px 0;
+      text-align: center;
       font-size: 18px;
+      color: #255f8e;
    }
+   p:last-child{
+      color: black;
+      font-weight: 700;
+   }
+   
    #inputValue{
       width: 80%;
       height: 25px;

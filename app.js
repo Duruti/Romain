@@ -47,18 +47,20 @@ var convertisseurRomain = function(num) {
 
 let inputValue = document.querySelector("#inputValue");
 let result = document.querySelector("#result");
-console.log(result);
-
+let text = document.querySelector("#text");
 //console.log(btnSubmit)
-
 let btnSubmit = document.querySelector("#submit");
-btnSubmit.addEventListener("click",function(){
-    let regex = /[0-9]/gi;
-    
-    const n = inputValue.value;
-    const v = parseInt(n.match(regex).join(''));
-    result.textContent = v + " donne en chiffre Romain: "+ convertisseurRomain(v)
-   // inputValue.value = "";
+inputValue.addEventListener("keydown",function(event){
+    if (event.keyCode === 13){
+        let regex = /[0-9]/gi;
+        event.preventDefault();
+        const n = inputValue.value;
+        const v = parseInt(n.match(regex).join(''));
+        text.textContent = v + " donne en chiffre Romain: ";
+        
+        result.textContent = convertisseurRomain(v)
+        inputValue.value = "";
+   }
 });
 // 36 = XXXVI
 // 2000 = MM
