@@ -1,5 +1,5 @@
 .container{
-   margin: 0 auto;
+   margin: 20px auto;
    max-width: 1000px;
    height: auto;
 }
@@ -71,10 +71,10 @@ form{
 
 }
 #submit{
-   margin-left: 15px;
+   /* margin-left: 15px;
    border: solid 1px;
    padding: 5px 10px;
-   border-radius: 5px;
+   border-radius: 5px; */
 }
 @media screen and (max-width : 1000px)
 {
@@ -98,6 +98,10 @@ form{
       height: 30%;
       padding-bottom: 10px;
    }
+   form{
+      flex-direction: column;
+      align-items: center;
+   }
    #romains{
       width: 80%;
       height: 50vw;
@@ -105,12 +109,12 @@ form{
       float: none;
    }
    p{
-      font-size: 100%;
+      font-size: 18px;
    }
    #inputValue{
-      width: 50%;
-      height: 25%;
+      width: 80%;
+      height: 25px;
       padding: 5px;
-   
+      margin: 20px 0;
    }
 }

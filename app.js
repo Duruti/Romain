@@ -45,17 +45,21 @@ var convertisseurRomain = function(num) {
     return result.join('')
 }
 
-let btnSubmit = document.querySelector("#submit");
 let inputValue = document.querySelector("#inputValue");
 let result = document.querySelector("#result");
+console.log(result);
 
 //console.log(btnSubmit)
-btnSubmit.addEventListener("click",function(){
-    const v = parseInt(inputValue.value);
-    result.textContent = v + " donne en chiffre Romain: "+ convertisseurRomain(v)
-    inputValue.value = "";
-});
 
+let btnSubmit = document.querySelector("#submit");
+btnSubmit.addEventListener("click",function(){
+    let regex = /[0-9]/gi;
+    
+    const n = inputValue.value;
+    const v = parseInt(n.match(regex).join(''));
+    result.textContent = v + " donne en chiffre Romain: "+ convertisseurRomain(v)
+   // inputValue.value = "";
+});
 // 36 = XXXVI
 // 2000 = MM
 // 5648 = MMMMMDCXLVIII
