@@ -1,33 +1,37 @@
 .container{
    margin: 0 auto;
-   position: relative;
-   width: 1000px;
-   height: 100vh;
+   max-width: 1000px;
+   height: auto;
 }
 h1{
    padding-top: 35px;
    text-align: center;
-   font-size: 3vw;
+   font-size: 30px;
    font-family: sans-serif;
 }
 
 h2{
+   
    text-align: center;
-   font-size: 2vw;
+   font-size: 20px;
    font-family: sans-serif;
 }
 body{
-   font-size: 1.5vw;
+   margin: 0;
+   padding: 0;
+   font-size: 15px;
    font-family: sans-serif;
+   background-color: rgb(235, 235, 235);
 }
 #main{
    float: right;
-   max-width: 800px;
-   height: 45%;
-
+   box-sizing: border-box;
+   width: 800px;
+   height: 250px;
+   padding-bottom: 20px;
 }
 p{
-   font-size: 1.5vw;
+   font-size: 18px;
 }
 form{
 
@@ -41,13 +45,13 @@ form{
 #asterix{
    /* position: absolute;
    top: 0; */
-   float: left;
+ float: left;
    width: 200px;
    height: 200px;
    background-image: url(asterix.png);
    background-position: center;
    background-size: contain;
-   background-repeat: no-repeat
+   background-repeat: no-repeat;
 }
 #romains{
    float: right;
@@ -59,8 +63,8 @@ form{
    background-repeat: no-repeat;
 }
 #inputValue{
-   width: 25vw;
-   height: 2vw;
+   width: 300px;
+   height: 25px;
    padding: 5px;
    border-radius: 5px;
    border-style: none;
@@ -72,7 +76,7 @@ form{
    padding: 5px 10px;
    border-radius: 5px;
 }
-@media screen and (max-width : 700px)
+@media screen and (max-width : 1000px)
 {
    .container{
       width: 100vw;
@@ -85,14 +89,28 @@ form{
       margin: 0 auto;
    }
    #main{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       margin: 0 auto;
       float: none;
-      height: auto;
+      height: 30%;
+      padding-bottom: 10px;
    }
    #romains{
       width: 80%;
       height: 50vw;
       margin: 0 auto;
       float: none;
+   }
+   p{
+      font-size: 100%;
+   }
+   #inputValue{
+      width: 50%;
+      height: 25%;
+      padding: 5px;
+   
    }
 }
