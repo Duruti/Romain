@@ -1,13 +1,98 @@
+.container{
+   margin: 0 auto;
+   position: relative;
+   width: 1000px;
+   height: 100vh;
+}
 h1{
+   padding-top: 35px;
    text-align: center;
-   font-size: 70px;
+   font-size: 3vw;
    font-family: sans-serif;
+}
+
+h2{
+   text-align: center;
+   font-size: 2vw;
+   font-family: sans-serif;
+}
+body{
+   font-size: 1.5vw;
+   font-family: sans-serif;
+}
+#main{
+   float: right;
+   max-width: 800px;
+   height: 45%;
+
+}
+p{
+   font-size: 1.5vw;
 }
 form{
 
    display: flex;
    justify-content: center;
+   align-items: center;
 }
 #result{
    text-align: center;
+}
+#asterix{
+   /* position: absolute;
+   top: 0; */
+   float: left;
+   width: 200px;
+   height: 200px;
+   background-image: url(asterix.png);
+   background-position: center;
+   background-size: contain;
+   background-repeat: no-repeat
+}
+#romains{
+   float: right;
+   width: 400px;
+   height: 200px;
+   background-image: url(romain.png);
+   background-position: center;
+   background-size: contain;
+   background-repeat: no-repeat;
+}
+#inputValue{
+   width: 25vw;
+   height: 2vw;
+   padding: 5px;
+   border-radius: 5px;
+   border-style: none;
+
+}
+#submit{
+   margin-left: 15px;
+   border: solid 1px;
+   padding: 5px 10px;
+   border-radius: 5px;
+}
+@media screen and (max-width : 700px)
+{
+   .container{
+      width: 100vw;
+   }
+
+   #asterix{
+      width: 50%;
+      height: 50vw;
+      float: none;
+      margin: 0 auto;
+   }
+   #main{
+      margin: 0 auto;
+      float: none;
+      height: auto;
+   }
+   #romains{
+      width: 80%;
+      height: 50vw;
+      margin: 0 auto;
+      float: none;
+   }
 }
