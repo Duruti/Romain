@@ -48,8 +48,31 @@ var convertisseurRomain = function(num) {
 let inputValue = document.querySelector("#inputValue");
 let result = document.querySelector("#result");
 let text = document.querySelector("#text");
+let colorText = text.style.color;
+
 //console.log(btnSubmit)
 let btnSubmit = document.querySelector("#submit");
+
+inputValue.addEventListener('input',(event)=>{
+    event.preventDefault();
+    let r = /[0-9]/g
+    console.log(text)
+//    let v = inputValue.value.match(r);
+    console.log('t')
+    inputValue.style.backgroundColor = "rgb(255,255,255)";
+    text.textContent = "";
+    text.style.color = colorText;
+    
+    if (!r.test(event.data) && event.inputType != "deleteContentBackward") 
+    {
+        inputValue.style.backgroundColor = "rgb(255,0,0)";
+        text.textContent = " Donnée non valide";
+        text.style.color = "rgb(255,0,0)"
+    }
+    
+      
+});
+
 inputValue.addEventListener("keydown",function(event){
     if (event.keyCode === 13){
         let regex = /[0-9]/gi;
